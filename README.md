@@ -1,9 +1,9 @@
-## Java template project
-This is quick start java gradle project
-Actions:
+## Java Design patterns project
 
-    - clone it:  git clone https://github.com/vmelnychuk/java-template-project.git
-    - remove remote:  git remote remove origin
-    - add new remote:  git remote add origin NEW_ORIGIN
-    - push master:  git push -u origin master
-    - git all stuff:  git push -u origin --all
+Tasks:
+
+    - Creational
+        - main patterns: builder, factory, singleton, registry
+        - make request/responce message creation in JSON format, use gson lib
+    - Behavioral
+    - Structural
