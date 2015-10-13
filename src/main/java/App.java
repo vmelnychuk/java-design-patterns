@@ -1,7 +1,13 @@
-import utils.StopWatch;
+import creation.EntityBuilder;
+import model.CarEntity;
+import model.ServiceEntity;
 
 public class App {
     public static void main(String[] args) {
-        System.out.print("Hello");
+        ServiceEntity serviceEntity = (ServiceEntity) EntityBuilder.parse(
+                       "{\"brand\": \"Opel\"," +
+                        "\"model\": \"TT\"," +
+                        "\"service\": \"clean\" }");
+        System.out.println(serviceEntity.toString());
     }
 }
