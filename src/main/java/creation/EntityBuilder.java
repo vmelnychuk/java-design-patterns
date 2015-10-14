@@ -38,11 +38,11 @@ public abstract class EntityBuilder {
 
     public abstract Entity build(String json);
 
-    public static Entity parse(String json) {
+    public static <R extends Entity>R parse(String json) {
         Map parametersMap  = (new Gson()).fromJson(json, Map.class);
         for(Map.Entry<String,Class<? extends Entity>> entry : keys.entrySet()){
             if(parametersMap.containsKey(entry.getKey())){
-                return builder.get(entry.getValue()).build(json);
+                return (R)builder.get(entry.getValue()).build(json);
             }
         }
         return null;

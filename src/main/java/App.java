@@ -4,7 +4,7 @@ import model.ServiceEntity;
 
 public class App {
     public static void main(String[] args) {
-        ServiceEntity serviceEntity = (ServiceEntity) EntityBuilder.parse(
+        ServiceEntity serviceEntity =  EntityBuilder.parse(
                        "{\"brand\": \"Opel\"," +
                         "\"model\": \"TT\"," +
                         "\"service\": \"clean\" }");
